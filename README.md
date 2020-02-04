@@ -16,17 +16,6 @@ WordPress Plugin with Shortcode for Site Copyrights with Auto-updating Year.
 - `prefix` - Text or HTML to add before the copyrights text, support shortcodes too.
 - `suffix` - Text or HTML to add after the copyrights text, support shortcodes too.
 
-
-## Changelog
-
-### 1.0.0
-
-* Initial commit.
-
-### 1.0.1
-
-* refactor: separate site name and date by comma.
-
 ## Contributors
 
 * Hammed Oyedele <itz.harmid@gmail.com> (https://github.com/devhammed)
