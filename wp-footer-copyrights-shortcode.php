@@ -4,7 +4,7 @@
  * Plugin Name: WP Footer Copyrights Shortcode
  * Plugin URI: https://github.com/devhammed/wp-footer-copyrights-shortcode
  * Description: WordPress Plugin with Shortcode for Site Copyrights with Auto-updating Year.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Hammed Oyedele
  * Author URI: https://github.com/devhammed
  * Text Domain: wp-footer-copyrights-shortcode
@@ -42,7 +42,7 @@ function devhammed_handle_wp_footer_copyrights_shortcode($attrs = array())
     $attrs = shortcode_atts(array(
         'site' => get_bloginfo('name'),
         'prefix' => '',
-        'suffix' => '',
+        'suffix' => '.',
     ), $attrs, 'wp-footer-copyrights');
 
     $current_year = date('Y');
@@ -50,6 +50,6 @@ function devhammed_handle_wp_footer_copyrights_shortcode($attrs = array())
     $prefix = do_shortcode($attrs['prefix']);
     $suffix = do_shortcode($attrs['suffix']);
 
-    return "${prefix}© Copyright ${site_name}, ${current_year}${suffix}";
+    return "${prefix}${site_name} © ${current_year}, All rights reserved${suffix}";
 }
 add_shortcode('wp-footer-copyrights', 'devhammed_handle_wp_footer_copyrights_shortcode');
