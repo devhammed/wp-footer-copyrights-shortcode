@@ -45,7 +45,7 @@ function devhammed_handle_wp_footer_copyrights_shortcode($attrs = array())
         'suffix' => '',
     ), $attrs, 'wp-footer-copyrights');
 
-    $current_year = \date('Y');
+    $current_year = date('Y');
     $site_name = $attrs['site'];
     $prefix = do_shortcode($attrs['prefix']);
     $suffix = do_shortcode($attrs['suffix']);
